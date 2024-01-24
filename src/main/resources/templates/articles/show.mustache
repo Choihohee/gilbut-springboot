@@ -1,12 +1,23 @@
 {{>layouts/header}}
 <table class="table">
-<thead>
-<tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
-</tr>
-</thead>
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#article}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/article}}
+    </tbody>
 </table>
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">수정</a>
+<a href="/articles" class="btn btn-primary">목록</a>
+
 {{>layouts/footer}}

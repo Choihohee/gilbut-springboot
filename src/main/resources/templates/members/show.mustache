@@ -1,0 +1,19 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">email</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#member}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{email}}</td>
+    </tr>
+    {{/member}}
+    </tbody>
+</table>
+<a href="/members" class="btn btn-primary">회원 목록</a>
+{{>layouts/footer}}
